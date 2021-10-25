@@ -13,9 +13,9 @@ The main problem is that anyone who calls the join() function will gain access t
 3. The $X community can toggle the join() fee based on demand. When interest is low the fee can be small, or nothing at all, and when interest is high the fee can be raised.
 
 # Who controls the treasury?
-This will need to be decided by the $X community. Hopefully we can set up a multi sig that includes myself and several key community members
+The treasury is currently a 4/6 multisig wallet owned by prominent members of the $X community.
 
 # Potential treasury use cases (ideas welcome!)
 1. Fund future contract deployments that add value to the $X ecosystem
-2. Sponsor high value, sought-after potential members by re-imbursing their join() fee.
-3. Use accumulated funds to start or contribute to a liquidity pool in uniswap v2/v3 (more research needed)
+2. Sponsor high value, sought-after potential members by re-imbursing their join() fee
+3. Fund liquidity pools
