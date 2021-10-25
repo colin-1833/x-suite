@@ -19,4 +19,3 @@ This will need to be decided by the $X community. Hopefully we can set up a mult
 1. Fund future contract deployments that add value to the $X ecosystem
 2. Sponsor high value, sought-after potential members by re-imbursing their join() fee.
 3. Use accumulated funds to start or contribute to a liquidity pool in uniswap v2/v3 (more research needed)
-

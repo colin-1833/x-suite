@@ -214,13 +214,13 @@ contract JoinX {
     * @dev Getter to load address status in UI
     */
     function getInviteSpent(address _address) external view returns(bool) {
-        return IX(X_token_address).allowlist(_address);
+        return IX(X_token_address).invitationSpent(_address);
     }
 
     /**
     * @dev Getter to load address status in UI
     */
     function getAllowed(address _address) external view returns(bool) {
-        return IX(X_token_address).invitationSpent(_address);
+        return IX(X_token_address).allowlist(_address);
     }
 }
