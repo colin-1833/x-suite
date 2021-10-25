@@ -1,0 +1,7 @@
+node_modules
+cache
+artifacts
+archive
+.env
+.working.*
+.DS_Store
