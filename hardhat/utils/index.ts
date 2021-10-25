@@ -2,12 +2,14 @@ import { DeployOptions } from 'hardhat-deploy/types';
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
 import { ethers } from 'hardhat';
 import type { Signer, Contract, BigNumber } from 'ethers';
-import '@nomiclabs/hardhat-ethers';
-import '@nomiclabs/hardhat-waffle';
-import 'hardhat-deploy';
+import config from '../config.json';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as dotenv from 'dotenv';
+
+import '@nomiclabs/hardhat-ethers';
+import '@nomiclabs/hardhat-waffle';
+import 'hardhat-deploy';
 
 export interface Accounts {
     deployer: Signer|null,
@@ -21,6 +23,8 @@ export const load_env = () => {
     }
     dotenv.config({ path: path_to_env });
 };
+
+load_env();
 
 export const get_accounts = (hre: HardhatRuntimeEnvironment): Promise<Accounts> => new Promise(async (resolve, reject) => { try {
     const unnamed_signers = await hre.ethers.getUnnamedSigners();
@@ -85,9 +89,9 @@ export const use_deployments = (hre: HardhatRuntimeEnvironment): any => {
             const JoinX = await deploy(hre, 'JoinX', {
                 from: await accounts.deployer.getAddress(),
                 args: [
-                    "0xA396Dac0BaBc6126dffD48b331495a13d31ba8a3", 
+                    config.x_token_address,
                     await accounts.deployer.getAddress(), 
-                    await accounts.deployer.getAddress(),
+                    config.treasury_wallet,
                     treasury_fee
                 ]
             });

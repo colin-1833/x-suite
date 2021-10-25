@@ -1,20 +1,12 @@
 import { HardhatUserConfig } from 'hardhat/config';
-import * as path from 'path';
-import * as fs from 'fs';
 import '@nomiclabs/hardhat-waffle';
 import '@nomiclabs/hardhat-ethers';
 import 'hardhat-deploy'
 import 'hardhat-contract-sizer';
 import 'hardhat-gas-reporter';
-import * as dotenv from 'dotenv';
+import { load_env } from './utils/index';
 
-const path_to_env = path.resolve(__dirname, './.env');
-
-if (!fs.existsSync(path_to_env)) {
-    throw new Error('.env file was not found!')
-}
-
-dotenv.config({ path: path_to_env });
+load_env();
 
 const config: HardhatUserConfig = {
     gasReporter: {
