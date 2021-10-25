@@ -2,7 +2,7 @@ import { DeployOptions } from 'hardhat-deploy/types';
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
 import { ethers } from 'hardhat';
 import type { Signer, Contract, BigNumber } from 'ethers';
-import config from '../config.json';
+import config from "../config";
 import * as fs from 'fs';
 import * as path from 'path';
 import * as dotenv from 'dotenv';

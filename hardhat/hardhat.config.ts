@@ -1,12 +1,14 @@
 import { HardhatUserConfig } from 'hardhat/config';
+import * as dotenv from 'dotenv';
+import * as path from 'path';
+
 import '@nomiclabs/hardhat-waffle';
 import '@nomiclabs/hardhat-ethers';
 import 'hardhat-deploy'
 import 'hardhat-contract-sizer';
 import 'hardhat-gas-reporter';
-import { load_env } from './utils/index';
 
-load_env();
+dotenv.config({ path: path.resolve(__dirname, './.env') });
 
 const config: HardhatUserConfig = {
     gasReporter: {
