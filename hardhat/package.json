@@ -5,7 +5,7 @@
     "deploy-hardhat": "rm -rf ./cache ./deployments/hardhat ./artifacts && npx hardhat deploy --network hardhat",
     "deploy-ropsten": "rm -rf ./cache ./deployments/ropsten ./artifacts && npx hardhat deploy --network ropsten",
     "deploy-mainnet": "rm -rf ./cache ./artifacts && npx hardhat deploy --network mainnet",
-    "test": "npx hardhat test ./test/.working.joinx.ts"
+    "test": "npx hardhat test ./test/joinx.ts"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.7",
